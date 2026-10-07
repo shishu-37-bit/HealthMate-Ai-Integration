@@ -1,0 +1,27 @@
+"use client";
+import { useEffect } from 'react'
+import OtpVerification from '@/components/verification/OtpVerification'
+import { RootState } from '@/redux/store';
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/navigation';
+
+const ResetOtp = () => {
+  const router = useRouter();
+  const { resetOtpAllowed } = useSelector((state: RootState) => state.auth);
+
+  useEffect(() => {
+    if (!resetOtpAllowed) {
+      router.replace("/auth");
+    }
+  }, [resetOtpAllowed, router]);
+
+  if (!resetOtpAllowed) {
+    return null;
+  }
+
+  return (
+      <OtpVerification />
+  )
+}
+
+export default ResetOtp

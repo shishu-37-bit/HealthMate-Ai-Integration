@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment files
+.env
+.env*.local
+*.env
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Next.js build
+.next/
+frontend/.next/
+out/
+build/
+dist/
+AGENTS.md
+CLAUDE.md
+frontend/AGENTS.md
+frontend/CLAUDE.md
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+backend/logs/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
