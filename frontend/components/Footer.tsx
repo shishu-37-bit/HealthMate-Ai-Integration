@@ -42,7 +42,7 @@ export default function Footer() {
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
         // Reset form
-        e.currentTarget.reset();
+        (e.target as HTMLFormElement).reset();
 
         toast.success("Subscribed to newsletter successfully!");
     };
